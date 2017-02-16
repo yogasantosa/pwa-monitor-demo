@@ -20,14 +20,14 @@
     </header>
     <div class="container">
         <div id="main" class="content">
-            <ul class="monitors-list" data-bind="foreach: monitors">
-                <li class="item">
-                    <span class="title" data-bind="html: title"></span>
-                    <span class="status" data-bind="html: status"></span>
-                    <span class="description" data-bind="html: description"></span>
-                    <span class="time" data-bind="html: time"></span>
-                </li>
-            </ul>
+            <div class="monitors-list" data-bind="foreach: monitors">
+                <div class="item">
+                    <div class="title" data-bind="html: title"></div>
+                    <div class="status" data-bind="html: status"></div>
+                    <div class="description" data-bind="html: description"></div>
+                    <div class="time" data-bind="html: time"></div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="./js/vendor/knockout-3.3.0.js"></script>
