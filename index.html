@@ -22,9 +22,9 @@
         <div id="main" class="content">
             <div class="monitors-list" data-bind="foreach: monitors">
                 <div class="item">
-                    <div class="title" data-bind="html: title"></div>
                     <div class="status" data-bind="html: status, style: { color: status === 'Offline' ? 'red' : 'green' }"></div>
-                    <div class="description" data-bind="html: description"></div>
+                    <div class="title" data-bind="html: title"></div>
+                    <div class="description" data-bind="html: description"></div><br / />
                     <div class="time" data-bind="html: time"></div>
                 </div>
             </div>
