@@ -9,8 +9,10 @@ self.addEventListener('install', function(e) {
             return cache.addAll([
                 './',
                 './css/style.css',
-                './js/build/script.min.js',
-                './js/build/vendor.min.js',
+                './js/vendor/knockout-3.3.0.js',
+                './js/monitors.js',
+                './js/page.js',
+                './js/main.js',
                 './css/fonts/roboto.woff',
                 './offline.html'
             ]).then(function() {
