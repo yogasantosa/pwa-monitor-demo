@@ -13,8 +13,7 @@ self.addEventListener('install', function(e) {
                 './js/monitors.js',
                 './js/page.js',
                 './js/main.js',
-                './css/fonts/roboto.woff',
-                './offline.html'
+                './css/fonts/roboto.woff'
             ]).then(function() {
                 self.skipWaiting();
             });
