@@ -11,19 +11,15 @@ var Page = (function() {
         vm: new ViewModel(),
         hideOfflineWarning: function() {
             // remove the offline message
-            document.getElementById("offline-container").setAttribute('display', 'block');
+            document.getElementById("offline-container").setAttribute('style', 'display:block');
         },
         showOfflineWarning: function() {
             // disable the live data
-            document.getElementById("offline-container").setAttribute('display', 'none');
+            document.getElementById("offline-container").setAttribute('style', 'display:none');
 
             if ("vibrate" in navigator) {
             	navigator.vibrate(1000);
             }
-
-            var audio = new Audio('./audio/raptor-sound.mp3');
-            audio.play();
         }
     }
-
 })();
