@@ -400,6 +400,7 @@ header h3 {
 
 .item .title,
 .item .status,
+.item .description,
 .item .time {
     display: block;
 }
@@ -410,6 +411,11 @@ header h3 {
 
 .item .status {
     float: right;
+    text-transform: uppercase;
+}
+
+.item .description {
+    float: left;
     text-transform: uppercase;
 }
 
