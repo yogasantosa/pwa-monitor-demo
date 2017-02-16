@@ -11,12 +11,12 @@ var Page = (function() {
         vm: new ViewModel(),
         hideOfflineWarning: function() {
             // remove the offline message
-            document.getElementById("offline-container").attr('display', 'block');
+            document.getElementById("offline-container").setAttribute('display', 'block');
         },
         showOfflineWarning: function() {
             // disable the live data
-            document.getElementById("offline-container").attr('display', 'none');
-            
+            document.getElementById("offline-container").setAttribute('display', 'none');
+
             if ("vibrate" in navigator) {
             	navigator.vibrate(1000);
             }
