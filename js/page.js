@@ -10,16 +10,19 @@ var Page = (function() {
     return {
         vm: new ViewModel(),
         hideOfflineWarning: function() {
-            // enable the live data
-            document.querySelector(".monitors-list").classList.remove('loading')
             // remove the offline message
-            document.getElementById("offline").remove();
-            // load the live data
+            document.getElementById("offline-container").attr('display', 'block');
         },
         showOfflineWarning: function() {
             // disable the live data
-            document.querySelector(".monitors-list").classList.add('loading')
-            alert('You are in offline mode');
+            document.getElementById("offline-container").attr('display', 'none');
+            
+            if ("vibrate" in navigator) {
+            	navigator.vibrate(1000);
+            }
+
+            var audio = new Audio('./audio/raptor-sound.mp3');
+            audio.play();
         }
     }
 

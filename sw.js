@@ -1,5 +1,5 @@
 // use a cacheName for cache versioning
-var cacheName = 'v1:static';
+var cacheName = 'monitorv1:static';
 
 // during the install phase you usually want to cache static assets
 self.addEventListener('install', function(e) {
@@ -13,7 +13,8 @@ self.addEventListener('install', function(e) {
                 './js/monitors.js',
                 './js/page.js',
                 './js/main.js',
-                './css/fonts/roboto.woff'
+                './css/fonts/roboto.woff',
+                './audio/raptor-sound.mp3'
             ]).then(function() {
                 self.skipWaiting();
             });
