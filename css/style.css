@@ -416,7 +416,6 @@ header h3 {
 
 .item .description {
     float: left;
-    text-transform: uppercase;
 }
 
 #offline {
