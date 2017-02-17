@@ -1,3 +1,6 @@
+var API_KEY = 'AAAA2sz2lT0:APA91bG3-YTz4k6CKaJDstKCwgmCT4iKAQTvuRtWkEzBteQNoHlaOaLp3cpdhUHjTZbwTo9rH5WZTQO914S4S6gqkFUG-VOQMzhaCAN3LzEzWhDb7MrXd3AovoytzaULBVtcYZ14fy3j';
+var GCM_ENDPOINT = 'https://android.googleapis.com/gcm/send';
+
 // register the service worker if available
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js').then(function(reg) {

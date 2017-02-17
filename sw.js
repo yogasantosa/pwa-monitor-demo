@@ -1,6 +1,21 @@
 // use a cacheName for cache versioning
 var cacheName = 'monitorv1:static';
 
+self.addEventListener('push', function(event) {
+  console.log('Received a push message', event);
+
+  var title = 'Yay a message.';
+  var body = 'We have received a push message.';  
+  var tag = 'simple-push-demo-notification-tag';
+
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      tag: tag
+    })
+  );
+});
+
 // during the install phase you usually want to cache static assets
 self.addEventListener('install', function(e) {
     // once the SW is installed, go ahead and fetch the resources to make this work offline
